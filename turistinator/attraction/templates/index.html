@@ -1,0 +1,11 @@
+<h1>
+    Attractions
+</h1>
+<ul>
+    {% for attraction in attractions %}
+        <li> {{ attraction.name}} </li>
+        <li> {{ attraction.tipology}} </li>
+        <li> {{ attraction.description}} </li>
+        <br>
+    {% endfor %}
+</ul>
