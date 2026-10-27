@@ -42,8 +42,9 @@ junit.xml
 # Jupyter Notebook
 .ipynb_checkpoints/
 
-# PyCharm / JetBrains IDE
+# PyCharm / JetBrains IDE / Visual Studio
 .idea/
+.vs/
 *.iml
 
 # Logs and temporary files
