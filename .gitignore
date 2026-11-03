@@ -64,3 +64,16 @@ docs/_build/
 
 # Project-specific local configuration
 config.local.*
+
+# ==========================================
+# Node / React Dependencies & Build Files
+# ==========================================
+node_modules/
+/npm-debug.log*
+/yarn-error.log*
+/pnpm-debug.log*
+
+# React Build Output Directories
+/build/
+/dist/
+/out/

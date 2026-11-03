@@ -1,0 +1,97 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #12201c;
+  background: #f4efe6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.hero {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #3d6b5a;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  margin: 0;
+  max-width: 38rem;
+  color: #4a5853;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fffdf8;
+  border: 1px solid #e4d9c8;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(46, 38, 22, 0.06);
+}
+
+.card-type {
+  margin: 0 0 10px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e7f2ec;
+  color: #2f5d4a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.card h2 {
+  margin: 8px 0 4px;
+  font-size: 1.35rem;
+}
+
+.card-city {
+  margin: 0 0 12px;
+  color: #6b7a74;
+  font-size: 0.92rem;
+}
+
+.card-description {
+  margin: 0;
+  color: #31423c;
+}
