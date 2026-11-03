@@ -1,10 +1,9 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from rest_framework import viewsets
 from .models import Attraction
+from .serializer import AttractionSerializer
 
-def index(request):
-    attractions = Attraction.objects.all()
-    return render(request, 'index.html', {'attractions': attractions})
+class AttractionViewSet(viewsets.ModelViewSet):
 
-def new(request):
-    return HttpResponse("Wow , that is a new attraction!")
+    queryset = Attraction.objects.all()
+
+    serializer_class = AttractionSerializer
