@@ -1,5 +1,10 @@
 import {http} from './http';
 
+export interface AttractionPhoto {
+  image_url: string;
+  alt_desc?: string | null;
+}
+
 export interface Attraction {
   id: number;
   name: string;
@@ -7,6 +12,9 @@ export interface Attraction {
   description: string;
   coordinates: string;
   city: number;
+  location?: string;
+  photos?: AttractionPhoto[];
+  tags?: string[];
 }
 
 export const attractionsApi = {

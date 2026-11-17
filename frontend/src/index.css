@@ -65,6 +65,12 @@ h1 {
   border-radius: 16px;
   padding: 22px;
   box-shadow: 0 10px 30px rgba(46, 38, 22, 0.06);
+  cursor: pointer;
+}
+
+.card:focus-visible {
+  outline: 2px solid #2f5d4a;
+  outline-offset: 3px;
 }
 
 .card-type {
@@ -94,4 +100,244 @@ h1 {
 .card-description {
   margin: 0;
   color: #31423c;
+}
+
+.detail-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px 48px;
+  background: #e7edf4;
+}
+
+.detail-status {
+  margin: 0 0 16px;
+  color: #31423c;
+}
+
+.detail-back {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: #1c2430;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.detail-card {
+  position: relative;
+  width: min(420px, 100%);
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(28, 39, 58, 0.16);
+  overflow: visible;
+}
+
+.detail-photo {
+  position: relative;
+  height: 340px;
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+  background: #d5dee8;
+}
+
+.detail-photo img,
+.detail-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-category,
+.detail-counter {
+  position: absolute;
+  top: 16px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.detail-category {
+  left: 16px;
+  background: #fff;
+  color: #1c2430;
+}
+
+.detail-category svg,
+.detail-tag svg {
+  width: 16px;
+  height: 16px;
+}
+
+.detail-category svg {
+  color: #2f9e62;
+}
+
+.detail-counter {
+  right: 16px;
+  background: rgba(17, 24, 33, 0.72);
+  color: #fff;
+}
+
+.detail-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1c2430;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(17, 24, 33, 0.16);
+}
+
+.detail-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.detail-arrow-prev {
+  left: 12px;
+}
+
+.detail-arrow-next {
+  right: 12px;
+}
+
+.detail-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.detail-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+}
+
+.detail-dot.is-active {
+  background: #fff;
+}
+
+.detail-sheet {
+  position: relative;
+  z-index: 2;
+  margin-top: -24px;
+  padding: 22px 22px 88px;
+  background: #fff;
+  border-radius: 24px 24px 28px 28px;
+}
+
+.detail-name {
+  margin: 0 0 6px;
+  font-size: 1.85rem;
+  letter-spacing: -0.03em;
+  color: #1b2430;
+}
+
+.detail-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  color: #66707c;
+  font-size: 0.98rem;
+}
+
+.detail-location svg {
+  width: 16px;
+  height: 16px;
+  color: #8b95a1;
+}
+
+.detail-description {
+  margin: 0;
+  color: #2c3540;
+  font-size: 1.02rem;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f3f5f8;
+  color: #3a4452;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.detail-tag svg {
+  color: #3d7eef;
+}
+
+.detail-actions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -28px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.detail-action {
+  width: 72px;
+  height: 72px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(28, 39, 58, 0.16);
+}
+
+.detail-action svg {
+  width: 30px;
+  height: 30px;
+}
+
+.detail-action-pass {
+  background: #fde8ea;
+  color: #e11d48;
+}
+
+.detail-action-save {
+  background: #22a35a;
+  color: #fff;
 }
