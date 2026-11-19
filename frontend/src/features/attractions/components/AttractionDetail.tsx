@@ -17,6 +17,7 @@ export function AttractionDetail({ id, onClose }: AttractionDetailProps) {
   const [attraction, setAttraction] = useState<Attraction | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [photoIndex, setPhotoIndex] = useState(0);
+  const relativePhoto = "media/";
 
   useEffect(() => {
     let cancelled = false;
@@ -73,15 +74,14 @@ export function AttractionDetail({ id, onClose }: AttractionDetailProps) {
       <article className="detail-card">
         <div className="detail-photo">
           {photo ? (
-            <div>
-              <p>{photo.image_route}</p>
-              <img
-                src={photo.image_route}
-                alt={photo.alt_desc || attraction.name}
-              />
-            </div>
+            <img
+              src={photo.image_url}
+              alt={photo.alt_desc || attraction.name}
+              className="detail-image"
+              decoding="async"
+            />
           ) : (
-            <div className="detail-photo-placeholder" aria-hidden="true" />
+            <div className="detail-photo-placeholder" />
           )}
 
           <span className="detail-category">
@@ -116,7 +116,7 @@ export function AttractionDetail({ id, onClose }: AttractionDetailProps) {
               <div className="detail-dots" role="tablist" aria-label="Photos">
                 {photos.map((item, index) => (
                   <button
-                    key={`${item.image_url}-${index}`}
+                    key={`${item.image_route}-${index}`}
                     type="button"
                     role="tab"
                     aria-label={`Photo ${index + 1}`}
