@@ -22,6 +22,7 @@ dist/
 .eggs/
 wheels/
 pip-wheel-metadata/
+media/
 
 # Testing and coverage
 .pytest_cache/
