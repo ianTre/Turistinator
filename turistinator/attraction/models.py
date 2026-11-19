@@ -30,12 +30,18 @@ class Attraction(models.Model):
     name = models.CharField(max_length=200 , default="noName")
     tipology = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
-
     coordinates = models.CharField(max_length=100)
-    city = models.ForeignKey(City, on_delete=models.CASCADE, null=True, blank=True)
+    city = models.ForeignKey(City, on_delete=models.CASCADE, null=False, blank=True)
+
+    # this controls the display name
+    def __str__(self):
+        return self.name
 
 class AttractionPhoto(models.Model):
-    image_url = models.CharField(max_length=2000)
+    image_route = models.CharField(max_length=2000)
     alt_desc = models.CharField(max_length=500 , null=True)
-    attraction = models.ForeignKey(Attraction, on_delete=models.CASCADE)
+    attraction = models.ForeignKey(Attraction, on_delete=models.CASCADE, related_name="photos")
+
+    def __str__(self):
+        return self.image_route
 

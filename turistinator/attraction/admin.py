@@ -15,7 +15,7 @@ class StateAdmin(admin.ModelAdmin):
     list_display = ('name', 'Country')
 
 class AttractionPhotoAdmin(admin.ModelAdmin):
-    list_display = ('image_url','alt_desc', 'attraction')
+    list_display = ('image_route','alt_desc', 'attraction')
 
 
 admin.site.register(Attraction, AttractionAdmin)
