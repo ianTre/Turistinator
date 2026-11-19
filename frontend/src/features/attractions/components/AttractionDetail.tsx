@@ -73,7 +73,13 @@ export function AttractionDetail({ id, onClose }: AttractionDetailProps) {
       <article className="detail-card">
         <div className="detail-photo">
           {photo ? (
-            <img src={photo.image_url} alt={photo.alt_desc || attraction.name} />
+            <div>
+              <p>{photo.image_route}</p>
+              <img
+                src={photo.image_route}
+                alt={photo.alt_desc || attraction.name}
+              />
+            </div>
           ) : (
             <div className="detail-photo-placeholder" aria-hidden="true" />
           )}
@@ -116,7 +122,9 @@ export function AttractionDetail({ id, onClose }: AttractionDetailProps) {
                     aria-label={`Photo ${index + 1}`}
                     aria-selected={index === photoIndex}
                     className={
-                      index === photoIndex ? "detail-dot is-active" : "detail-dot"
+                      index === photoIndex
+                        ? "detail-dot is-active"
+                        : "detail-dot"
                     }
                     onClick={() => setPhotoIndex(index)}
                   />

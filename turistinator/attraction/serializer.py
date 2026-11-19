@@ -4,11 +4,11 @@ from .models import Attraction , AttractionPhoto
 class AttractionPhotoSerializer(serializers.ModelSerializer):
     class Meta:
         model = AttractionPhoto
-        fields = ['image_route']
+        fields = ["id", "image_route", "alt_desc"]
 
 class AttractionSerializer(serializers.ModelSerializer):
 
-    Photos = AttractionPhotoSerializer()
+    photos = AttractionPhotoSerializer(many=True , read_only=True)
     class Meta:
         model = Attraction
-        fields = ['id', 'name' , 'tipology' , 'description' , 'coordinates' , 'city' ,'Photos']
+        fields = ['id', 'name' , 'tipology' , 'description' , 'coordinates' , 'city' ,'photos']

@@ -1,7 +1,7 @@
 import {http} from './http';
 
 export interface AttractionPhoto {
-  image_url: string;
+  image_route: string;
   alt_desc?: string | null;
 }
 

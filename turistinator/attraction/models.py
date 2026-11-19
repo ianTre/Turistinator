@@ -31,7 +31,7 @@ class Attraction(models.Model):
     tipology = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     coordinates = models.CharField(max_length=100)
-    city = models.ForeignKey(City, on_delete=models.CASCADE, null=False, blank=True)
+    city = models.ForeignKey(City, on_delete=models.CASCADE, null=True, blank=True)
 
     # this controls the display name
     def __str__(self):

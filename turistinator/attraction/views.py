@@ -5,8 +5,7 @@ from .serializer import AttractionSerializer, AttractionPhotoSerializer
 
 class AttractionViewSet(viewsets.ModelViewSet):
 
-    queryset = Attraction.objects.all()
-
+    queryset = Attraction.objects.prefetch_related('photos').all()
     serializer_class = AttractionSerializer
 
 class AttractionPhotoViewSet(viewsets.ModelViewSet):
